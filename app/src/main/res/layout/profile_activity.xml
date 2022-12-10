@@ -1,72 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_gray"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:orientation="vertical">
 
-    <GridLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:columnCount="3"
-        android:rowCount="1"
-        android:layout_gravity="bottom">
+        android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/home_button"
-            android:layout_width="121dp"
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            app:cardBackgroundColor="@color/light_black">
+            app:cardBackgroundColor="@color/light_black"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="22dp"
                 android:layout_height="22dp"
-                android:src="@drawable/home_outline"
-                android:layout_gravity="center">
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:src="@drawable/profile_outline">
 
             </ImageView>
 
-        </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:fontFamily="@font/semibold"
+                android:text="Profile"
+                android:textColor="@color/white"
+                android:textSize="24dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/explore_button"
-            android:layout_width="121dp"
-            android:layout_height="50dp"
-            app:cardBackgroundColor="@color/light_black">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@drawable/search_outline"
-                android:layout_gravity="center">
-
-            </ImageView>
+            </TextView>
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/profile_button"
-            android:layout_width="121dp"
-            android:layout_height="50dp"
-            android:layout_row="0"
-            android:layout_column="2"
-            app:cardBackgroundColor="@color/light_black">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="690dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/gridLayout2">
 
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:layout_gravity="center"
-                android:src="@drawable/profile_fill">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/dark_gray">
 
-            </ImageView>
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="90dp"
+                    android:src="@drawable/profile_picture_1">
 
-        </androidx.cardview.widget.CardView>
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:columnCount="2"
+                android:rowCount="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="Name:"
+                    android:textColor="@color/red"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="user_name"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="Mail:"
+                    android:textColor="@color/red"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="user_mail"
+                    android:textColor="@color/white"
+                    android:textSize="20dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="Phone:"
+                    android:textColor="@color/red"
+                    android:textSize="24dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="user_phone"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
+
+                </TextView>
 
 
-    </GridLayout>
+            </GridLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/light_black"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/settings">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="48dp"
+                    android:fontFamily="@font/semibold"
+                    android:text="Settings"
+                    android:textColor="@color/white"
+                    android:textSize="24dp">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
 
 
-</ScrollView>
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/gridLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:columnCount="3"
+            android:rowCount="1"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/home_button"
+                android:layout_width="121dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/light_black">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_outline">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/explore_button"
+                android:layout_width="121dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/light_black">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/search_outline">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profile_button"
+                android:layout_width="121dp"
+                android:layout_height="50dp"
+                app:cardBackgroundColor="@color/light_black">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/profile_fill">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -2,7 +2,6 @@ package com.example.skillit
 
 import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
@@ -25,7 +24,14 @@ class VideoActivity : AppCompatActivity() {
                                     + packageName+"/"+R.raw.video))
         video_view!!.requestFocus()
         video_view!!.start()
-        
+
+        video_view!!.setOnCompletionListener {
+            Toast.makeText(applicationContext, "Video Completed", Toast.LENGTH_LONG).show()
+        }
+        video_view!!.setOnErrorListener { mp, what, extra ->
+            Toast.makeText(applicationContext, "An Error Occurred ", Toast.LENGTH_LONG).show()
+            false
+        }
 
     }
 }

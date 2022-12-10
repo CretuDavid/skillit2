@@ -1,5 +1,6 @@
 package com.example.skillit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -14,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
         val explore_button = findViewById<CardView>(R.id.explore_button) as CardView
         val profile_button = findViewById<CardView>(R.id.profile_button) as CardView
         val home_button = findViewById<CardView>(R.id.home_button) as CardView
+        val firstvideo = findViewById<CardView>(R.id.firstvideo) as CardView
         home_button.setOnClickListener{
             intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
@@ -26,6 +28,11 @@ class HomeActivity : AppCompatActivity() {
             intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
+        firstvideo.setOnClickListener{
+            intent = Intent(this, VideoActivity::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
