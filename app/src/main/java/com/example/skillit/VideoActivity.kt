@@ -6,6 +6,7 @@ import android.widget.MediaController
 import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.skillit.databinding.VideoCellBinding
 
 class VideoActivity : AppCompatActivity() {
     var mediaControlls : MediaController? = null
@@ -21,7 +22,7 @@ class VideoActivity : AppCompatActivity() {
         }
         videoView.setMediaController(mediaControlls)
         videoView.setVideoURI(Uri.parse("android.resource://"
-                                    + packageName+"/"+R.raw.video))
+                                    + packageName+"/"+R.raw.cleste))
         videoView.requestFocus()
         videoView.start()
 

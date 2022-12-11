@@ -59,24 +59,31 @@ class ExploreActivity : AppCompatActivity(), BookClickListener
     private fun populateBooks() {
         val book1 = Book(
             R.drawable.placeholder,
-            "Dummy title 1",
-            "dummylink1",
+            "kotlin"
         )
         bookList.add(book1)
 
         val book2 = Book(
             R.drawable.placeholder,
-            "Dummy title 2",
-            "dummylink2",
+            "limite"
         )
         bookList.add(book2)
 
         val book3 = Book(
             R.drawable.placeholder,
-            "Dummy title 3",
-            "dummylink3",
+            "limite2"
         )
         bookList.add(book3)
+        val book4 = Book(
+            R.drawable.placeholder,
+            "cleste"
+        )
+        bookList.add(book4)
+        val book5 = Book(
+            R.drawable.placeholder,
+            "majorari"
+        )
+        bookList.add(book5)
     }
 
 

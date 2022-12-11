@@ -38,16 +38,6 @@
                 android:lines="2"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/link"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Link"
-                android:textColor="@color/dark_red"
-                android:textSize="12sp"
-                android:lines="1" />
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
