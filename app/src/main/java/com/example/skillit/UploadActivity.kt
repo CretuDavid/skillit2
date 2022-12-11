@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import com.example.skillit.data.InventoryApplication
 
 class UploadActivity : AppCompatActivity (){
@@ -17,9 +18,9 @@ class UploadActivity : AppCompatActivity (){
         this.supportActionBar?.hide()
         setContentView(R.layout.upload_activity)
 
-        val upload_button = findViewById<Button>(R.id.upload)
-        val link = findViewById<EditText>(R.id.link)
-        val title = findViewById<EditText>(R.id.title)
+        val upload_button = findViewById<CardView>(R.id.upload)
+        val link = findViewById<EditText>(R.id.upload_link_cardview_edittext)
+        val title = findViewById<EditText>(R.id.upload_title_cardview_edittext)
 
         upload_button.setOnClickListener{
             viewModel.addNewItem(link.text.toString(), title.text.toString())

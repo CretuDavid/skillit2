@@ -31,7 +31,7 @@ class ProfileActivity : AppCompatActivity() {
         val explore_button = findViewById(R.id.explore_button) as CardView
         val profile_button = findViewById(R.id.profile_button) as CardView
         val home_button = findViewById(R.id.home_button) as CardView
-        val upload_button = findViewById<Button>(R.id.upload)
+        val upload_button = findViewById<CardView>(R.id.profile_upload_cardview)
         home_button.setOnClickListener{
             intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
@@ -46,7 +46,6 @@ class ProfileActivity : AppCompatActivity() {
             intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
         }
-
         upload_button.setOnClickListener{
             intent = Intent(this, UploadActivity::class.java)
             startActivity(intent)

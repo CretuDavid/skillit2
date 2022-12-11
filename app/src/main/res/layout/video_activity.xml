@@ -5,31 +5,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VideoActivity">
+    tools:context=".VideoActivity"
+    android:background="@color/dark_gray">
 
-    <TextView
-        android:id="@+id/videodescription"
-        android:layout_width="135dp"
-        android:layout_height="21dp"
-        android:text="Fortnite 90s Tutorial"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/videotopbar"
+        android:layout_width="363dp"
+        android:layout_height="45dp"
+        app:cardBackgroundColor="@color/light_black"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/play">
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/semibold"
+            android:text="@string/video_title_1"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="@color/dark_gray"
+        app:cardCornerRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/videotopbar">
 
-    </TextView>
+        <VideoView
+            android:id="@+id/video"
+            android:layout_width="match_parent"
+            android:layout_height="260dp">
 
-    <VideoView
-        android:id="@+id/video"
-        android:layout_width="413dp"
-        android:layout_height="359dp"
-        android:layout_marginBottom="264dp"
-        app:layout_constraintBaseline_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"></VideoView>
+        </VideoView>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
