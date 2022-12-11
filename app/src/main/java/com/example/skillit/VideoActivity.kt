@@ -14,21 +14,21 @@ class VideoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
         setContentView(R.layout.video_activity)
-        val video_view = findViewById<VideoView>(R.id.video) as VideoView
+        val videoView = findViewById<VideoView>(R.id.video)
         if(mediaControlls == null){
             mediaControlls = MediaController(this)
             mediaControlls!!.setAnchorView(this.video_view)
         }
-        video_view!!.setMediaController(mediaControlls)
-        video_view!!.setVideoURI(Uri.parse("android.resource://"
+        videoView.setMediaController(mediaControlls)
+        videoView.setVideoURI(Uri.parse("android.resource://"
                                     + packageName+"/"+R.raw.video))
-        video_view!!.requestFocus()
-        video_view!!.start()
+        videoView.requestFocus()
+        videoView.start()
 
-        video_view!!.setOnCompletionListener {
+        videoView.setOnCompletionListener {
             Toast.makeText(applicationContext, "Video Completed", Toast.LENGTH_LONG).show()
         }
-        video_view!!.setOnErrorListener { mp, what, extra ->
+        videoView.setOnErrorListener { mp, what, extra ->
             Toast.makeText(applicationContext, "An Error Occurred ", Toast.LENGTH_LONG).show()
             false
         }

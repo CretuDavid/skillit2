@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 
 class HomeActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
@@ -23,10 +24,12 @@ class HomeActivity : AppCompatActivity() {
         explore_button.setOnClickListener{
             intent = Intent(this, ExploreActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         profile_button.setOnClickListener{
             intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
         firstvideo.setOnClickListener{
             intent = Intent(this, VideoActivity::class.java)

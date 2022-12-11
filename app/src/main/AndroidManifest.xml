@@ -31,6 +31,12 @@
         <activity
             android:name=".ProfileActivity">
         </activity>
+        <activity
+            android:name=".VideoActivity">
+        </activity>
+        <activity
+            android:name=".UploadActivity">
+        </activity>
 
     </application>
 
